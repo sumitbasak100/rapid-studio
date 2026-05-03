@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoltAI Studio — We Build Your Product</title>
+<meta name="description" content="Describe what you want to build. We'll design, code, and deploy it for you — fixed price, fast turnaround.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/studio.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </svg>
+    </div>
+    BoltAI
+  </a>
+  <div class="nav-r">
+    <a href="#what-we-build">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="/">Try BoltAI free</a>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </div>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#what-we-build" onclick="closeMob()">Services</a>
+  <a href="#pricing" onclick="closeMob()">Pricing</a>
+  <a href="/" onclick="closeMob()">Try BoltAI free</a>
+  <a href="#contact" class="mob-cta" onclick="closeMob()">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="stars"></div>
+    <div class="glw g1"></div>
+    <div class="glw g2"></div>
+    <div class="glw g3"></div>
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+  <svg class="trees" viewBox="0 0 1440 210" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#040f1c" stop-opacity=".97"/>
+        <stop offset="100%" stop-color="#020c18"/>
+      </linearGradient>
+    </defs>
+    <polygon points="0,210 52,78 104,210" fill="url(#tg)"/>
+    <polygon points="34,210 96,48 158,210" fill="url(#tg)"/>
+    <polygon points="88,210 146,88 204,210" fill="url(#tg)"/>
+    <polygon points="150,210 205,108 260,210" fill="url(#tg)"/>
+    <polygon points="192,210 255,68 318,210" fill="url(#tg)"/>
+    <polygon points="262,210 313,98 364,210" fill="url(#tg)"/>
+    <polygon points="328,210 374,122 420,210" fill="url(#tg)" opacity=".7"/>
+    <polygon points="578,210 624,142 670,210" fill="url(#tg)" opacity=".5"/>
+    <polygon points="718,210 771,152 824,210" fill="url(#tg)" opacity=".4"/>
+    <polygon points="1008,210 1056,128 1104,210" fill="url(#tg)" opacity=".7"/>
+    <polygon points="1072,210 1126,98 1180,210" fill="url(#tg)"/>
+    <polygon points="1142,210 1196,78 1250,210" fill="url(#tg)"/>
+    <polygon points="1208,210 1260,108 1312,210" fill="url(#tg)"/>
+    <polygon points="1268,210 1326,68 1384,210" fill="url(#tg)"/>
+    <polygon points="1336,210 1388,88 1440,210" fill="url(#tg)"/>
+    <rect x="0" y="205" width="1440" height="10" fill="#020c18"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hl">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        BoltAI Studio — Done for you
+      </div>
+      <h1>Describe it.<br>We'll <span class="t">design</span> &amp;<br><em>build it.</em></h1>
+      <p class="hero-sub">Tell us what you want to build. We'll turn it into a fully coded, deployed product — fast, at a fixed price. No agencies, no hourly billing, no surprises.</p>
+      <div class="build-chips">
+        <div class="chip">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="1.5"/><path d="M5 7h6M5 10h4"/></svg>
+          Landing pages
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+          SaaS dashboards
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="1" width="8" height="14" rx="1.5"/><path d="M7 12h2"/></svg>
+          Web apps
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1l2 4h4l-3 3 1 4-4-2.5L4 12l1-4L2 5h4z"/></svg>
+          AI products
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h12v8H2zM6 4V2h4v2"/><path d="M6 8h4M8 8v3"/></svg>
+          E-commerce
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+          Internal tools
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-p">
+          Start a project
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#pricing" class="btn-g">See pricing</a>
+      </div>
+    </div>
+
+    <div class="hr">
+      <div class="studio-card">
+        <div class="sc-label">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v6l3 3"/><circle cx="8" cy="10" r="5"/></svg>
+          How it works
+        </div>
+        <div class="sc-title">From idea to live product<br>in days, not months.</div>
+        <div class="process-steps">
+          <div class="ps">
+            <div class="ps-num">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l5-5 3 3 4-6"/></svg>
+            </div>
+            <div class="ps-text">
+              <strong>Describe your idea</strong>
+              <span>Fill our short form — what you want, who it's for, rough timeline.</span>
+            </div>
+          </div>
+          <div class="ps">
+            <div class="ps-num">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l-8 8-4-4"/></svg>
+            </div>
+            <div class="ps-text">
+              <strong>20-minute call</strong>
+              <span>We align on scope and send a fixed-price proposal same day.</span>
+            </div>
+          </div>
+          <div class="ps">
+            <div class="ps-num">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l5-5a1 1 0 0 0 1.4 0z"/><path d="M9 3l4 4M3 9l4 4M1 15l4-4"/></svg>
+            </div>
+            <div class="ps-text">
+              <strong>We build it</strong>
+              <span>Full responsive code, designed and deployed to your domain.</span>
+            </div>
+          </div>
+          <div class="ps">
+            <div class="ps-num">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2l-8 8-4-2 2 6 2-3 4 4 6-14-2 1z"/></svg>
+            </div>
+            <div class="ps-text">
+              <strong>You ship</strong>
+              <span>Source code is yours. Live URL delivered. No lock-in ever.</span>
+            </div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <div class="sc-stat">
+            <div class="sc-stat-n">5<span>–</span>7</div>
+            <div class="sc-stat-l">Day turnaround</div>
+          </div>
+          <div class="sc-div"></div>
+          <div class="sc-stat">
+            <div class="sc-stat-n"><span>$</span>0</div>
+            <div class="sc-stat-l">Discovery call</div>
+          </div>
+          <div class="sc-div"></div>
+          <div class="sc-stat">
+            <div class="sc-stat-n">1<span>×</span></div>
+            <div class="sc-stat-l">Fixed price</div>
+          </div>
+          <div class="sc-div"></div>
+          <div class="sc-stat">
+            <div class="sc-stat-n">100<span>%</span></div>
+            <div class="sc-stat-l">You own it</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section class="section sec-c" id="what-we-build">
+  <div class="sec-label">What we build</div>
+  <h2 class="sec-title">Whatever you can <span class="t">describe,</span><br>we can ship.</h2>
+  <p class="sec-desc">From a single landing page to a full SaaS product with backend — we cover the full stack.</p>
+  <div class="build-grid rev">
+    <div class="bg-card">
+      <div class="bg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div class="bg-name">Marketing Sites</div>
+      <div class="bg-desc">Landing pages, product sites, and company pages that convert visitors into customers.</div>
+      <div class="bg-tags"><span class="bg-tag">Next.js</span><span class="bg-tag">Tailwind</span><span class="bg-tag">CMS</span></div>
+    </div>
+    <div class="bg-card">
+      <div class="bg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M17 14v7"/></svg>
+      </div>
+      <div class="bg-name">SaaS Dashboards</div>
+      <div class="bg-desc">Analytics panels, admin tools, and data-heavy interfaces designed for clarity and speed.</div>
+      <div class="bg-tags"><span class="bg-tag">React</span><span class="bg-tag">Charts</span><span class="bg-tag">Auth</span></div>
+    </div>
+    <div class="bg-card">
+      <div class="bg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2l1.5 9h9L18 2"/><path d="M3 9h18l-1.5 9H4.5L3 9z"/><circle cx="9" cy="21" r="1"/><circle cx="15" cy="21" r="1"/></svg>
+      </div>
+      <div class="bg-name">E-commerce</div>
+      <div class="bg-desc">Custom storefronts, product pages, and checkout flows built for conversion.</div>
+      <div class="bg-tags"><span class="bg-tag">Stripe</span><span class="bg-tag">Inventory</span><span class="bg-tag">Custom UI</span></div>
+    </div>
+    <div class="bg-card">
+      <div class="bg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+      </div>
+      <div class="bg-name">Web &amp; Mobile Apps</div>
+      <div class="bg-desc">Full-featured apps with auth, user management, and database — ready to scale.</div>
+      <div class="bg-tags"><span class="bg-tag">Full-stack</span><span class="bg-tag">API</span><span class="bg-tag">DB</span></div>
+    </div>
+    <div class="bg-card">
+      <div class="bg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="bg-name">Internal Tools</div>
+      <div class="bg-desc">Ops dashboards, CRMs, and workflow tools that save your team hours every week.</div>
+      <div class="bg-tags"><span class="bg-tag">Custom</span><span class="bg-tag">Integrations</span><span class="bg-tag">Fast</span></div>
+    </div>
+    <div class="bg-card">
+      <div class="bg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2L12 12"/><path d="M17 2h5v5"/></svg>
+      </div>
+      <div class="bg-name">AI-Powered Products</div>
+      <div class="bg-desc">Interfaces that connect to LLMs, handle user prompts, and deliver AI-driven experiences.</div>
+      <div class="bg-tags"><span class="bg-tag">OpenAI</span><span class="bg-tag">Claude</span><span class="bg-tag">Streaming</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing-sec sec-c" id="pricing">
+  <div class="sec-label">Pricing</div>
+  <h2 class="sec-title">Simple, <span class="t">fixed pricing</span></h2>
+  <p class="sec-desc">No hourly billing. A firm number before we write a single line of code.</p>
+  <div class="pgrid rev">
+    <div class="pc">
+      <div class="pc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+      </div>
+      <div class="pc-name">Landing Page</div>
+      <div class="pc-desc">One polished page to validate your idea and start capturing leads fast.</div>
+      <div class="pc-price"><span class="pc-sym">$</span>599</div>
+      <div class="pc-turn">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+        3–5 day turnaround
+      </div>
+      <div class="pc-div"></div>
+      <ul class="pc-list">
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 responsive page</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Custom design from scratch</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Domain deployment</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full source code</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 revision round</li>
+      </ul>
+      <a href="#contact" class="pc-btn ghost">Get started</a>
+    </div>
+    <div class="pc feat">
+      <div class="feat-pill">Most Popular</div>
+      <div class="pc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="pc-name">Full Product</div>
+      <div class="pc-desc">Multi-page product, fully responsive, deployed and ready to launch.</div>
+      <div class="pc-price"><span class="pc-sym">$</span>2,500</div>
+      <div class="pc-turn">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+        5–7 day turnaround
+      </div>
+      <div class="pc-div"></div>
+      <ul class="pc-list">
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>3–6 pages, fully designed</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Responsive across all devices</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CMS integration (optional)</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Domain deployment</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full source code + 2 revisions</li>
+      </ul>
+      <a href="#contact" class="pc-btn">Get started</a>
+    </div>
+    <div class="pc">
+      <div class="pc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <div class="pc-name">Full Stack</div>
+      <div class="pc-desc">Everything above, plus backend, auth, and database — a working product.</div>
+      <div class="pc-price"><span class="pc-sym">$</span>6,000</div>
+      <div class="pc-turn">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+        2–3 week turnaround
+      </div>
+      <div class="pc-div"></div>
+      <ul class="pc-list">
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>All pages + backend logic</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Auth (email / OAuth)</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Database &amp; REST API</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Admin panel included</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Scalable infra + 3 revisions</li>
+      </ul>
+      <a href="#contact" class="pc-btn ghost">Get started</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="section form-sec" id="contact">
+  <div class="fw">
+    <div class="fl rev">
+      <div class="sec-label left">Start a project</div>
+      <h2 class="sec-title">Tell us what<br>you want to <span class="t">build.</span></h2>
+      <p class="fsubtext">Fill in the form and we'll reach out within 24 hours to schedule a quick call. No commitment until you've seen and approved the proposal.</p>
+      <div class="tlist">
+        <div class="trow">
+          <div class="t-ico">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" transform="scale(0.83) translate(1,0)"/></svg>
+          </div>
+          <div class="t-txt"><strong>No brief needed</strong><span>Describe your idea in plain English. We'll handle the rest.</span></div>
+        </div>
+        <div class="trow">
+          <div class="t-ico">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="11" rx="1.5"/><path d="M7 6V4a3 3 0 0 1 6 0v2"/></svg>
+          </div>
+          <div class="t-txt"><strong>Fixed price, always</strong><span>You get a firm number before we touch a line of code.</span></div>
+        </div>
+        <div class="trow">
+          <div class="t-ico">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2H8L2 8v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><path d="M8 2v6H2"/></svg>
+          </div>
+          <div class="t-txt"><strong>You own everything</strong><span>Full source code delivered. No lock-in, no ongoing fees.</span></div>
+        </div>
+        <div class="trow">
+          <div class="t-ico">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10c0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8"/><path d="M14 2l4 4-4 4"/><path d="M18 6H9"/></svg>
+          </div>
+          <div class="t-txt"><strong>Reply within 24 hours</strong><span>We move fast. You'll hear from us within one business day.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fr rev">
+      <div class="fcard" id="fcard">
+        <div class="fcard-head">
+          <h3>Describe your project</h3>
+          <p>Free discovery call · Fixed-price proposal · No commitment</p>
+        </div>
+        <div class="fcard-inner" id="finner">
+          <div class="fcard-body">
+            <div class="f2col">
+              <div class="ff">
+                <label for="fname">Your Name <span class="req">*</span></label>
+                <input type="text" id="fname" name="name" placeholder="Alex Johnson" required autocomplete="name">
+              </div>
+              <div class="ff">
+                <label for="femail">Email <span class="req">*</span></label>
+                <input type="email" id="femail" name="email" placeholder="alex@company.com" required autocomplete="email">
+              </div>
+            </div>
+            <div class="ff">
+              <label for="fdesc">What do you want to build? <span class="req">*</span></label>
+              <textarea id="fdesc" name="description" rows="4" placeholder="e.g. A SaaS dashboard for tracking social media analytics, with a landing page, user auth, and charts…" required></textarea>
+            </div>
+            <div class="f2col">
+              <div class="ff">
+                <label for="fbudget">Budget</label>
+                <select id="fbudget" name="budget">
+                  <option value="" disabled selected>Select range</option>
+                  <option>Under $1,000</option>
+                  <option>$1,000 – $3,000</option>
+                  <option>$3,000 – $7,000</option>
+                  <option>$7,000+</option>
+                </select>
+              </div>
+              <div class="ff">
+                <label for="ftimeline">Timeline</label>
+                <select id="ftimeline" name="timeline">
+                  <option value="" disabled selected>How soon?</option>
+                  <option>ASAP</option>
+                  <option>Within 2 weeks</option>
+                  <option>Within a month</option>
+                  <option>Just exploring</option>
+                </select>
+              </div>
+            </div>
+            <div class="ff">
+              <label for="frefs">References / links <span class="opt">(optional)</span></label>
+              <input type="text" id="frefs" name="references" placeholder="Figma file, competitor site, inspiration URL…">
+            </div>
+            <div id="form-error" class="form-error" style="display:none"></div>
+            <button class="submit-btn" id="submitBtn" type="button" onclick="handleSubmit()">
+              <span id="submitLabel">Submit &amp; get a proposal</span>
+              <svg id="submitArrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              <svg id="submitSpinner" class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="display:none"><circle cx="12" cy="12" r="10" stroke-opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" /></svg>
+            </button>
+          </div>
+          <div class="fnote">Response within 24h &nbsp;·&nbsp; No commitment until proposal accepted &nbsp;·&nbsp; Free discovery call</div>
+        </div>
+        <div class="succ" id="succ">
+          <div class="succ-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>We've got your request!</h3>
+          <p>Expect a message within 24 hours to book a quick call and discuss your project.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="flogo">
+    <div class="flogo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    </div>
+    BoltAI
+  </a>
+  <div class="flinks">
+    <a href="/">Home</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </div>
+  <div class="fcopy">© 2026 BoltAI. All rights reserved.</div>
+</footer>
+
+<script src="/studio.js"></script>
+</body>
+</html>

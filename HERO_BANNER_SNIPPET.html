@@ -1,0 +1,139 @@
+<!--
+  ============================================================
+  BOLTAI.DEV — HERO BANNER SNIPPET
+  ============================================================
+  Paste this block directly after your "Try these examples"
+  chips section in the hero. No extra CSS files needed —
+  all styles are scoped inline via a class prefix.
+  ============================================================
+-->
+
+<style>
+.studio-banner {
+  margin-top: 28px;
+  width: 100%;
+  max-width: 780px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  animation: bannerFadeUp 0.6s 0.5s ease both;
+  transition: border-color 0.25s, background 0.25s;
+}
+.studio-banner:hover {
+  border-color: rgba(0, 201, 167, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+}
+@keyframes bannerFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.sb-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+.sb-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(0,201,167,0.2), rgba(0,136,255,0.2));
+  border: 1px solid rgba(0,201,167,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #00e5c0;
+}
+.sb-icon svg { width: 20px; height: 20px; }
+.sb-text {}
+.sb-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00c9a7;
+  margin-bottom: 3px;
+}
+.sb-headline {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.sb-subtext {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.4;
+}
+.sb-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0a2540;
+  background: linear-gradient(135deg, #00e5c0, #00c9a7);
+  border: none;
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 3px 14px rgba(0,201,167,0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.sb-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,201,167,0.5);
+}
+.sb-cta svg { width: 14px; height: 14px; transition: transform 0.2s; }
+.sb-cta:hover svg { transform: translateX(3px); }
+
+/* Divider line left of icon */
+.sb-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+  display: none; /* optional — enable if you want a visual sep */
+}
+
+@media (max-width: 640px) {
+  .studio-banner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .sb-cta { width: 100%; justify-content: center; }
+}
+</style>
+
+<!-- PASTE THIS WHERE YOU WANT THE BANNER -->
+<div class="studio-banner">
+  <div class="sb-left">
+    <div class="sb-icon">
+      <!-- Wrench + sparkle icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+    </div>
+    <div class="sb-text">
+      <div class="sb-eyebrow">BoltAI Studio</div>
+      <div class="sb-headline">Want someone to build this for you?</div>
+      <div class="sb-subtext">We turn your idea into a live product — fixed price, fast turnaround.</div>
+    </div>
+  </div>
+  <a href="/studio" class="sb-cta">
+    Build for me
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 8h10M9 4l4 4-4 4"/>
+    </svg>
+  </a>
+</div>
