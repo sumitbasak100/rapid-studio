@@ -1,92 +1,48 @@
-# BoltAI Studio — Vercel Deployment
+# BoltAI Studio — Build For Me
 
-## File structure
+Landing page with contact form, powered by [Resend](https://resend.com).
+
+## Project Structure
 
 ```
-boltai-studio/
 ├── public/
-│   ├── index.html       ← the studio page
-│   ├── studio.css       ← all styles
-│   └── studio.js        ← frontend JS (scroll, nav, form)
+│   └── index.html       # The landing page
 ├── api/
-│   └── submit.js        ← serverless function (form → email)
-├── vercel.json          ← Vercel routing config
-├── HERO_BANNER_SNIPPET.html  ← paste this into your main site
-└── README.md
+│   └── contact.js       # Vercel serverless function → sends email via Resend
+├── vercel.json          # Vercel config
+└── .env.example         # Environment variable template
 ```
 
----
-
-## Deploy to Vercel in 3 steps
+## Deploy to Vercel
 
 ### 1. Push to GitHub
+Upload this repo to GitHub (public or private).
+
+### 2. Import on Vercel
+Go to [vercel.com/new](https://vercel.com/new), import your GitHub repo. Vercel auto-detects the config.
+
+### 3. Add Environment Variable
+In your Vercel project → **Settings → Environment Variables**, add:
+
+| Name | Value |
+|------|-------|
+| `RESEND_API_KEY` | `re_your_key_here` |
+
+Get your key from [resend.com/api-keys](https://resend.com/api-keys).
+
+### 4. Update sender/recipient in `api/contact.js`
+```js
+from: 'BoltAI Studio <you@yourdomain.com>',  // must be verified in Resend
+to:   ['you@yourdomain.com'],                 // where you receive inquiries
+```
+
+> **Note:** Until you verify a domain in Resend, you can use `onboarding@resend.dev` as the `from` address — but emails can only be sent **to the email address registered on your Resend account** in test mode.
+
+## Local Development
+
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-gh repo create boltai-studio --public --push
+npm i -g vercel
+cp .env.example .env.local
+# fill in RESEND_API_KEY in .env.local
+vercel dev
 ```
-
-### 2. Import in Vercel
-- Go to https://vercel.com/new
-- Import your GitHub repo
-- Vercel auto-detects the config
-
-### 3. Add environment variables
-In Vercel → Project → Settings → Environment Variables, add:
-
-| Variable | Value | Notes |
-|----------|-------|-------|
-| `RESEND_API_KEY` | `re_xxxxxxxxxxxxxx` | Get from resend.com/api-keys |
-| `NOTIFY_EMAIL` | `you@yourdomain.com` | Where lead emails go |
-| `FROM_EMAIL` | `studio@boltai.dev` | Must be verified in Resend |
-| `ALLOWED_ORIGIN` | `https://boltai.dev` | Your main domain (CORS) |
-
-Then **Redeploy** once after adding env vars.
-
----
-
-## Setting up Resend (free, takes 5 min)
-
-1. Sign up at https://resend.com — free tier is 100 emails/day, 3,000/month
-2. Add and verify your domain (boltai.dev) under Domains
-3. Copy your API key from API Keys section
-4. Paste it as `RESEND_API_KEY` in Vercel
-
----
-
-## Hosting on a subdirectory of boltai.dev
-
-If you want it at `boltai.dev/studio` instead of a separate domain:
-
-**Option A — Vercel rewrite in your main project:**
-Add to your main `vercel.json`:
-```json
-{
-  "rewrites": [
-    { "source": "/studio/:path*", "destination": "https://your-studio.vercel.app/:path*" }
-  ]
-}
-```
-
-**Option B — Just use the standalone URL:**
-Deploy as `studio.boltai.dev` — add a CNAME in your DNS pointing to `cname.vercel-dns.com`.
-
----
-
-## Adding the hero banner to boltai.dev
-
-Open `HERO_BANNER_SNIPPET.html` and paste the entire block
-(the `<style>` tag + the `<div class="studio-banner">` element)
-directly after your "Try these examples" chips in your homepage.
-
-Change the `href="/studio"` to wherever you host this page.
-
----
-
-## Customising
-
-- **Pricing** — edit the three `.pc` cards in `public/index.html`
-- **Services** — edit the `.bg-card` items in the "What we build" section
-- **Brand colours** — all defined as CSS variables at the top of `studio.css`
-- **Email template** — edit the HTML strings in `api/submit.js`
