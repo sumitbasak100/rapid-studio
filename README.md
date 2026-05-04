@@ -1,4 +1,4 @@
-# BoltAI Studio — Build For Me
+# Rapid Studio — Build For Me
 
 Landing page with contact form, powered by [Resend](https://resend.com).
 
@@ -32,7 +32,7 @@ Get your key from [resend.com/api-keys](https://resend.com/api-keys).
 
 ### 4. Update sender/recipient in `api/contact.js`
 ```js
-from: 'BoltAI Studio <you@yourdomain.com>',  // must be verified in Resend
+from: 'Rapid Studio <you@yourdomain.com>',  // must be verified in Resend
 to:   ['you@yourdomain.com'],                 // where you receive inquiries
 ```
 
