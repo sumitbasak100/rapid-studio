@@ -6,6 +6,10 @@
 <title>We Build Your Product — Rapid Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+<!-- Favicon: SVG lightning bolt in teal circle -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23071e35'/%3E%3Cpolygon points='19,4 10,17 16,17 13,28 22,15 16,15' fill='%2300e5c0' stroke='%2300e5c0' stroke-width='0.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -44,17 +48,41 @@ nav.up {
   backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 rgba(255,255,255,0.07);
 }
+
+/* ─── LOGO ─── */
 .logo {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 11px;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 19px; font-weight: 700;
-  color: #fff; text-decoration: none; letter-spacing: -.01em;
+  font-size: 18px; font-weight: 700;
+  color: #fff; text-decoration: none; letter-spacing: -.02em;
 }
 .logo-mark {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--teal-light), #00a8ff);
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(145deg, #071e35 0%, #0d2d52 100%);
+  border: 1.5px solid rgba(0,229,192,0.35);
   display: flex; align-items: center; justify-content: center;
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(0,229,192,0);
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
+.logo:hover .logo-mark {
+  border-color: rgba(0,229,192,0.7);
+  box-shadow: 0 0 14px rgba(0,229,192,0.25);
+}
+.logo-mark svg {
+  display: block;
+}
+.logo-wordmark {
+  display: flex; flex-direction: column; line-height: 1;
+}
+.logo-name {
+  font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -.03em;
+}
+.logo-tag {
+  font-size: 10px; font-weight: 500; color: var(--teal); letter-spacing: .06em;
+  text-transform: uppercase; margin-top: 2px;
+}
+
 .nav-r { display: flex; align-items: center; gap: 32px; }
 .nav-r a {
   font-size: 14px; font-weight: 500;
@@ -292,7 +320,6 @@ h2.sec-title .t { color: var(--teal-dim); }
   box-shadow: 0 20px 52px rgba(0,0,0,.08);
   border-color: rgba(0,163,137,.28);
 }
-/* icon left, name right — same row */
 .bg-card-top {
   display: flex; align-items: center; gap: 16px;
   margin-bottom: 14px;
@@ -347,7 +374,6 @@ h2.sec-title .t { color: var(--teal-dim); }
   padding: 5px 18px; border-radius: 100px; white-space: nowrap;
   box-shadow: 0 2px 10px rgba(0,163,137,.3);
 }
-/* icon left, name right — same row */
 .pc-top {
   display: flex; align-items: center; gap: 16px;
   margin-bottom: 12px;
@@ -403,6 +429,16 @@ h2.sec-title .t { color: var(--teal-dim); }
   color: var(--gray-d); box-shadow: none;
 }
 .pc-btn.outline:hover { border-color: var(--teal-dim); color: var(--teal-dim); box-shadow: none; }
+
+/* pricing note */
+.pricing-note {
+  text-align: center; margin-top: 40px;
+  font-size: 14px; color: var(--gray);
+  max-width: 520px; margin-left: auto; margin-right: auto;
+  line-height: 1.6;
+}
+.pricing-note a { color: var(--teal-dim); text-decoration: none; font-weight: 600; }
+.pricing-note a:hover { text-decoration: underline; }
 
 /* ─── FORM ─── */
 .form-sec { padding: 108px 56px; background: var(--off); }
@@ -488,6 +524,12 @@ h2.sec-title .t { color: var(--teal-dim); }
   font-size: 14px; margin-top: 6px; display: none; line-height: 1.5;
 }
 .form-error.show { display: block; }
+.form-success-msg {
+  background: rgba(0,163,137,0.08); border: 1.5px solid rgba(0,163,137,.25);
+  color: var(--teal-dim); border-radius: 9px; padding: 11px 15px;
+  font-size: 14px; margin-top: 6px; display: none; line-height: 1.5;
+}
+.form-success-msg.show { display: block; }
 
 /* success */
 .succ { display:none; flex-direction:column; align-items:center; text-align:center; padding:52px 30px; gap:14px; }
@@ -518,7 +560,8 @@ footer {
 }
 .fl2-ico {
   width: 30px; height: 30px;
-  background: linear-gradient(135deg, var(--teal), #00aaff);
+  background: linear-gradient(135deg, #071e35, #0d2d52);
+  border: 1px solid rgba(0,229,192,0.3);
   border-radius: 8px; display: flex; align-items: center; justify-content: center;
 }
 .flinks { display:flex; gap:28px; }
@@ -555,11 +598,24 @@ footer {
 
 <!-- NAV -->
 <nav id="nav">
+  <!-- LOGO: lightning bolt mark + wordmark -->
   <a href="/" class="logo">
     <div class="logo-mark">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10 2L4 10h6l-2 6 8-10h-6l2-6z" fill="#071e35" stroke="#071e35" stroke-width=".4" stroke-linejoin="round"/></svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="12,2 5,11 10,11 8,18 15,9 10,9" fill="#00e5c0" stroke="none"/>
+        <polygon points="12,2 5,11 10,11 8,18 15,9 10,9" fill="url(#lg)" stroke="none"/>
+        <defs>
+          <linearGradient id="lg" x1="5" y1="2" x2="15" y2="18" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#00ffe0"/>
+            <stop offset="100%" stop-color="#00c9a7"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
-    Rapid Studio
+    <div class="logo-wordmark">
+      <span class="logo-name">Rapid Studio</span>
+      <span class="logo-tag">Build for you</span>
+    </div>
   </a>
   <div class="nav-r">
     <a href="#what-we-build">What we build</a>
@@ -613,10 +669,10 @@ footer {
       <div class="build-chips">
         <div class="chip"><div class="chip-dot"></div>Landing pages</div>
         <div class="chip"><div class="chip-dot"></div>SaaS dashboards</div>
-        <div class="chip"><div class="chip-dot"></div>Mobile apps</div>
+        <div class="chip"><div class="chip-dot"></div>AI tools</div>
         <div class="chip"><div class="chip-dot"></div>E-commerce</div>
         <div class="chip"><div class="chip-dot"></div>Internal tools</div>
-        <div class="chip"><div class="chip-dot"></div>Full-stack products</div>
+        <div class="chip"><div class="chip-dot"></div>Full-stack MVPs</div>
       </div>
 
       <div class="hero-btns">
@@ -733,9 +789,9 @@ footer {
         <div class="bg-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#009d84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="9" cy="14" r="1" fill="#009d84"/><circle cx="15" cy="14" r="1" fill="#009d84"/></svg>
         </div>
-        <div class="bg-name">AI-Powered Products</div>
+        <div class="bg-name">AI-Powered Tools</div>
       </div>
-      <div class="bg-desc">Interfaces that connect to LLMs, handle user prompts, and deliver AI-driven experiences.</div>
+      <div class="bg-desc">Image generators, chatbots, writing assistants — AI products built and deployed end-to-end.</div>
       <div class="bg-tags"><span class="bg-tag">OpenAI</span><span class="bg-tag">Claude</span><span class="bg-tag">Streaming</span></div>
     </div>
   </div>
@@ -746,10 +802,12 @@ footer {
   <div class="sec-hd">
     <div class="sec-label">Pricing</div>
     <h2 class="sec-title">Simple, <span class="t">fixed pricing</span></h2>
-    <p class="sec-desc">No hourly billing. A firm number before we write a single line of code.</p>
+    <p class="sec-desc">A firm number before we write a single line of code. No hourly rates, no hidden fees.</p>
   </div>
 
   <div class="pgrid rev">
+
+    <!-- TIER 1: Landing Page -->
     <div class="pc">
       <div class="pc-top">
         <div class="pc-ico">
@@ -757,7 +815,7 @@ footer {
         </div>
         <div class="pc-name">Landing Page</div>
       </div>
-      <div class="pc-desc">One polished page to validate your idea and start capturing leads.</div>
+      <div class="pc-desc">One polished, conversion-focused page to launch your idea and start capturing leads.</div>
       <div class="pc-price"><span class="pc-sym">$</span>599</div>
       <div class="pc-turn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -765,64 +823,70 @@ footer {
       </div>
       <div class="pc-div"></div>
       <ul class="pc-list">
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 responsive page</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 fully responsive page</li>
         <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Custom design from scratch</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Domain deployment</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full source code</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 revision round</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Contact or waitlist form</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Deployed to your domain</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full source code + 1 revision</li>
       </ul>
       <a href="#contact" class="pc-btn outline">Get started →</a>
     </div>
 
+    <!-- TIER 2: MVP / Tool — FEATURED -->
     <div class="pc feat">
       <div class="feat-pill">Most Popular</div>
       <div class="pc-top">
         <div class="pc-ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#009d84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#009d84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <div class="pc-name">Full Product</div>
+        <div class="pc-name">MVP / Tool</div>
       </div>
-      <div class="pc-desc">Multi-page product, fully responsive, deployed and ready to launch.</div>
+      <div class="pc-desc">A working product people can sign up for, pay for, and use. Perfect for AI tools, SaaS MVPs, and simple apps.</div>
       <div class="pc-price"><span class="pc-sym">$</span>2,500</div>
       <div class="pc-turn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        5–7 day turnaround
+        5–10 day turnaround
       </div>
       <div class="pc-div"></div>
       <ul class="pc-list">
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>3–6 pages, fully designed</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Responsive across all devices</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CMS integration (optional)</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Domain deployment</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>User accounts &amp; login</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Payments or subscriptions</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>One core feature built end-to-end</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Simple user dashboard</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Deployed &amp; ready to share</li>
         <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full source code + 2 revisions</li>
       </ul>
       <a href="#contact" class="pc-btn">Get started →</a>
     </div>
 
+    <!-- TIER 3: Full Product -->
     <div class="pc">
       <div class="pc-top">
         <div class="pc-ico">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#009d84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
         </div>
-        <div class="pc-name">Full Stack</div>
+        <div class="pc-name">Full Product</div>
       </div>
-      <div class="pc-desc">Everything above, plus backend, auth, and database — a working product.</div>
+      <div class="pc-desc">A complete, multi-feature product with complex workflows, integrations, and a real database behind it.</div>
       <div class="pc-price"><span class="pc-sym">$</span>6,000</div>
       <div class="pc-turn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        2–3 week turnaround
+        2–4 week turnaround
       </div>
       <div class="pc-div"></div>
       <ul class="pc-list">
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>All pages + backend logic</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Auth (email / OAuth)</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Database &amp; REST API</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Admin panel included</li>
-        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Scalable infra + 3 revisions</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Everything in MVP / Tool</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Multiple features &amp; complex workflows</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Admin panel to manage users &amp; content</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Connects to your existing tools &amp; services</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Built to scale as you grow</li>
+        <li><span class="ck"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full source code + 3 revisions</li>
       </ul>
       <a href="#contact" class="pc-btn outline">Get started →</a>
     </div>
   </div>
+
+  <p class="pricing-note rev">Final price depends on scope. Not sure which tier fits? <a href="#contact">Tell us what you're building</a> and we'll give you an honest estimate on the call — no commitment required.</p>
 </section>
 
 <!-- FORM -->
@@ -868,24 +932,43 @@ footer {
         </div>
         <div class="fcard-inner" id="finner">
           <div class="fcard-body">
+            <!-- Web3Forms hidden fields -->
+            <input type="hidden" name="access_key" id="w3f-key" value="044344ca-8d93-47fd-a3a2-9e540be61f83">
+            <input type="hidden" name="subject" id="w3f-subject" value="New project inquiry — Rapid Studio">
+            <input type="hidden" name="from_name" value="Rapid Studio">
+            <!-- botcheck honeypot -->
+            <input type="checkbox" name="botcheck" style="display:none">
+
             <div class="fr2">
               <div class="ff"><label>Your Name</label><input id="f-name" type="text" placeholder="Alex Johnson" required></div>
               <div class="ff"><label>Email</label><input id="f-email" type="email" placeholder="alex@company.com" required></div>
             </div>
-            <div class="ff"><label>What do you want to build?</label><textarea id="f-desc" rows="3" placeholder="e.g. A SaaS dashboard for tracking social media analytics, with a landing page, user auth, and charts…" required></textarea></div>
+            <div class="ff"><label>What do you want to build?</label><textarea id="f-desc" rows="3" placeholder="e.g. An AI image generator with user accounts, Stripe credits, and a gallery of past generations…" required></textarea></div>
             <div class="fr2">
               <div class="ff">
                 <label>Budget</label>
-                <select id="f-budget"><option value="" disabled selected>Select range</option><option>Under $1,000</option><option>$1,000 – $3,000</option><option>$3,000 – $7,000</option><option>$7,000+</option></select>
+                <select id="f-budget">
+                  <option value="" disabled selected>Select range</option>
+                  <option>Under $1,000</option>
+                  <option>$1,000 – $3,000</option>
+                  <option>$3,000 – $7,000</option>
+                  <option>$7,000+</option>
+                </select>
               </div>
               <div class="ff">
                 <label>Timeline</label>
-                <select id="f-timeline"><option value="" disabled selected>How soon?</option><option>ASAP</option><option>Within 2 weeks</option><option>Within a month</option><option>Just exploring</option></select>
+                <select id="f-timeline">
+                  <option value="" disabled selected>How soon?</option>
+                  <option>ASAP</option>
+                  <option>Within 2 weeks</option>
+                  <option>Within a month</option>
+                  <option>Just exploring</option>
+                </select>
               </div>
             </div>
             <div class="ff"><label>Any links or references? (optional)</label><input type="text" id="f-links" placeholder="Figma link, competitor site, inspiration…"></div>
             <div class="form-error" id="form-error"></div>
-            <button class="submit-btn" id="submit-btn" onclick="handleSubmit(event)">
+            <button class="submit-btn" id="submit-btn" type="button" onclick="handleSubmit(event)">
               <span id="btn-label">Submit &amp; get a proposal</span>
               <svg id="btn-arrow" width="17" height="17" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
@@ -896,8 +979,8 @@ footer {
           <div class="succ-ico">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#071e35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h3>We've got your request!</h3>
-          <p>Expect a message from us within 24 hours to book a quick call and discuss your project.</p>
+          <h3>Message received!</h3>
+          <p>We'll be in touch within 24 hours to book a quick call and talk through your project.</p>
         </div>
       </div>
     </div>
@@ -907,23 +990,25 @@ footer {
 <footer>
   <a href="/" class="fl2">
     <div class="fl2-ico">
-      <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M10 2L4 10h6l-2 6 8-10h-6l2-6z" fill="#071e35" stroke="#071e35" stroke-width=".4" stroke-linejoin="round"/></svg>
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="12,2 5,11 10,11 8,18 15,9 10,9" fill="#00e5c0"/>
+      </svg>
     </div>
     Rapid Studio
   </a>
   <div class="flinks">
     <a href="/">Home</a>
     <a href="#pricing">Pricing</a>
-    <a href="https://Rapid Studio.dev/privacy" target="_blank" rel="noopener">Privacy</a>
-    <a href="https://Rapid Studio.dev/terms" target="_blank" rel="noopener">Terms</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
 
 <script>
+  /* ── Nav scroll ── */
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('up', window.scrollY > 30));
 
+  /* ── Form submit via Web3Forms ── */
   async function handleSubmit(e) {
     e.preventDefault();
     const name     = document.getElementById('f-name').value.trim();
@@ -938,9 +1023,10 @@ footer {
     const btnArrow = document.getElementById('btn-arrow');
 
     errEl.classList.remove('show');
-    if (!name)  { showError('Please enter your name.'); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
-    if (!desc)  { showError('Please describe what you want to build.'); return; }
+
+    if (!name)  { return showError('Please enter your name.'); }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { return showError('Please enter a valid email address.'); }
+    if (!desc)  { return showError('Please describe what you want to build.'); }
 
     btn.disabled = true;
     btnLabel.textContent = 'Sending…';
@@ -949,24 +1035,49 @@ footer {
     spinner.className = 'spinner';
     btn.appendChild(spinner);
 
+    const accessKey = document.getElementById('w3f-key').value;
+
+    /* Build the message body for Web3Forms */
+    const messageBody = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Budget: ${budget || 'Not specified'}`,
+      `Timeline: ${timeline || 'Not specified'}`,
+      links ? `Links: ${links}` : null,
+      ``,
+      `Project Description:`,
+      desc,
+    ].filter(l => l !== null).join('\n');
+
+    const payload = {
+      access_key: accessKey,
+      subject: `New project inquiry from ${name} — Rapid Studio`,
+      from_name: 'Rapid Studio',
+      name,
+      email,
+      message: messageBody,
+      /* Auto-reply to client */
+      replyto: email,
+    };
+
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, description: desc, budget, timeline, links })
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
       });
 
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data.error || `Request failed (${res.status})`);
+      const data = await res.json();
+
+      if (data.success) {
+        document.getElementById('finner').classList.add('hide');
+        document.getElementById('succ').classList.add('show');
+      } else {
+        throw new Error(data.message || 'Submission failed');
       }
-
-      document.getElementById('finner').classList.add('hide');
-      document.getElementById('succ').classList.add('show');
-
     } catch (err) {
       console.error(err);
-      showError('Something went wrong sending your message. Please try again or email us directly at hello@Rapid Studio.dev.');
+      showError('Something went wrong. Please try again or email us directly.');
       btn.disabled = false;
       btnLabel.textContent = 'Submit & get a proposal';
       btnArrow.style.display = '';
@@ -980,10 +1091,7 @@ footer {
     }
   }
 
-  function escHtml(str) {
-    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
+  /* ── Scroll reveal ── */
   const io = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
