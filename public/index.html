@@ -380,16 +380,7 @@ h2.sec-title .t { color: var(--teal-dim); }
   pointer-events: none; z-index: 1;
 }
 
-
-/* fallback shown when img fails to load */
-.sc-preview-fallback {
-  position: absolute; inset: 0; z-index: 0;
-  display: flex; align-items: center; justify-content: center;
-}
-.sc-preview-fallback-inner {
-  display: flex; flex-direction: column; align-items: center; gap: 12px;
-}
-.sc-logo-wrap {
+  .sc-logo-wrap {
   width: 60px; height: 60px; border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -918,12 +909,6 @@ footer {
     <div class="sc-card" data-project="lexica">
       <div class="sc-card-preview">
         <img src="/lexicaai.net.png" alt="LexicaAI preview" onerror="this.style.display='none'">
-        <div class="sc-preview-fallback" style="background:linear-gradient(135deg,#0f0c24,#2d1b69)">
-          <div class="sc-preview-fallback-inner">
-            <div class="sc-logo-wrap" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">L</div>
-            <div class="sc-preview-label">Image Generator</div>
-          </div>
-        </div>
       </div>
       <div class="sc-card-body">
         <div class="sc-card-meta">
@@ -941,12 +926,6 @@ footer {
     <div class="sc-card" data-project="cleverschool">
       <div class="sc-card-preview">
         <img src="/cleverschool.ai.png" alt="CleverSchool.ai preview" onerror="this.style.display='none'">
-        <div class="sc-preview-fallback" style="background:linear-gradient(135deg,#0c1a2e,#1a3a5c)">
-          <div class="sc-preview-fallback-inner">
-            <div class="sc-logo-wrap" style="background:linear-gradient(135deg,#60a5fa,#2563eb)">C</div>
-            <div class="sc-preview-label">Teacher AI Platform</div>
-          </div>
-        </div>
       </div>
       <div class="sc-card-body">
         <div class="sc-card-meta">
@@ -960,39 +939,10 @@ footer {
       </div>
     </div>
 
-    <!-- QuestionAI.io -->
-    <div class="sc-card" data-project="questionai">
-      <div class="sc-card-preview">
-        <img src="/questionai.io.png" alt="QuestionAI preview" onerror="this.style.display='none'">
-        <div class="sc-preview-fallback" style="background:linear-gradient(135deg,#1a0a00,#4a2500)">
-          <div class="sc-preview-fallback-inner">
-            <div class="sc-logo-wrap" style="background:linear-gradient(135deg,#fb923c,#ea580c)">Q</div>
-            <div class="sc-preview-label">Homework Helper</div>
-          </div>
-        </div>
-      </div>
-      <div class="sc-card-body">
-        <div class="sc-card-meta">
-          <div class="sc-card-name">QuestionAI.io</div>
-          <a href="https://questionai.io" target="_blank" rel="noopener noreferrer" class="sc-card-link">Visit site <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4h6v6M4 12l8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-        <div class="sc-card-desc">AI homework helper for students — snap a question, get a clear step-by-step answer. Covers math, science, history, and more across all grade levels.</div>
-        <div class="sc-card-tags">
-          <span class="sc-card-tag">EdTech</span><span class="sc-card-tag">AI Q&amp;A</span><span class="sc-card-tag">Mobile-first</span>
-        </div>
-      </div>
-    </div>
-
     <!-- Freelancers.bot -->
     <div class="sc-card" data-project="freelancers">
       <div class="sc-card-preview">
         <img src="/freelancers.bot.png" alt="Freelancers.bot preview" onerror="this.style.display='none'">
-        <div class="sc-preview-fallback" style="background:linear-gradient(135deg,#071e35,#0b3a6e)">
-          <div class="sc-preview-fallback-inner">
-            <div class="sc-logo-wrap" style="background:linear-gradient(135deg,#38bdf8,#0284c7)">F</div>
-            <div class="sc-preview-label">AI Marketplace</div>
-          </div>
-        </div>
       </div>
       <div class="sc-card-body">
         <div class="sc-card-meta">
@@ -1002,6 +952,23 @@ footer {
         <div class="sc-card-desc">Marketplace of AI-powered freelancer bots that handle tasks on demand — from writing to design to research, available 24/7.</div>
         <div class="sc-card-tags">
           <span class="sc-card-tag">Marketplace</span><span class="sc-card-tag">AI Agents</span><span class="sc-card-tag">Payments</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- QuestionAI.io -->
+    <div class="sc-card" data-project="questionai">
+      <div class="sc-card-preview">
+        <img src="/questionai.io.png" alt="QuestionAI preview" onerror="this.style.display='none'">
+      </div>
+      <div class="sc-card-body">
+        <div class="sc-card-meta">
+          <div class="sc-card-name">QuestionAI.io</div>
+          <a href="https://questionai.io" target="_blank" rel="noopener noreferrer" class="sc-card-link">Visit site <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4h6v6M4 12l8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="sc-card-desc">AI homework helper for students — snap a question, get a clear step-by-step answer. Covers math, science, history, and more across all grade levels.</div>
+        <div class="sc-card-tags">
+          <span class="sc-card-tag">EdTech</span><span class="sc-card-tag">AI Q&amp;A</span><span class="sc-card-tag">Mobile-first</span>
         </div>
       </div>
     </div>
