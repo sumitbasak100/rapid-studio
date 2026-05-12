@@ -373,13 +373,6 @@ h2.sec-title .t { color: var(--teal-dim); }
 }
 .sc-card:hover .sc-card-preview img { transform: scale(1.03); }
 
-/* overlay gradient at bottom for readability */
-.sc-card-preview::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(7,30,53,.55) 0%, transparent 55%);
-  pointer-events: none; z-index: 1;
-}
-
 /* fallback shown when img fails to load */
 .sc-preview-fallback {
   position: absolute; inset: 0; z-index: 0;
